@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Centralized Dual Grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="global-background">
+        <img src="pixel_1.gif" alt="Retro Background">
+        <div class="overlay"></div>
+    </div>
+
+    <aside class="sidebar">
+        <div class="sidebar-header"><h1>HOME</h1></div>
+        <nav class="menu-nav">
+            <button class="nav-btn active" onclick="naviga('home', event)">Home</button>
+            <button class="nav-btn" onclick="naviga('chi-sono', event)">Profilo_Utente</button>
+            <button class="nav-btn" onclick="naviga('terzo', event)">Terzo Anno</button>
+            <button class="nav-btn" onclick="naviga('quarto', event)">Quarto Anno</button>
+            <button class="nav-btn" onclick="naviga('quinto', event)">Quinto Anno</button>
+        </nav>
+    </aside>
+
+    <main id="content-area">
+        <section id="home" class="page active">
+            <h1 class="led-title">Alessandro Colacino portfolio</h1>
+            <p class="status-text">System Status: ONLINE</p>
+        </section>
+
+        <section id="chi-sono" class="page">
+            <h1 class="led-title">CHI SONO</h1>
+            <div class="bio-container">
+                <div class="scan-wrapper">
+                    <img id="bio-img-anim" src="Alle.jpeg" alt="User" class="bio-img">
+                    <div class="scan-line"></div>
+                </div>
+                <div class="bio-text">
+                    <h2>> IDENTITÀ_RILEVATA</h2>
+                    <p id="bio-text-anim" class="large-desc"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="terzo" class="page">
+            <h1 class="led-title">TERZO ANNO</h1>
+            <div class="project-grid dual-layout">
+                <div class="card" onclick="apriProgetto('terzo', 'NONNI SMART', 'nonni.png','Nonni smart è stato un progetto dove noi giovani studenti abbiamo insegnato a persone anziane delle generazioni passate, a utilizzare telefoni smartphone e il proprio computer.Il progetto è stato molto importante, aiutandoci molto a migliorarci nell\'ambito dell\'esposizione davanti ad altre persone.')">
+                    <img src="nonni.png" class="card-img-contain"><div class="card-tag">NONNI SMART</div>
+                </div>
+                <div class="card" onclick="apriProgetto('terzo', 'PROGETTO USD', 'anpal.png', 'USD​Il progetto USD è stata un introduzione tramite videochiamata al mondo dell\'alternanza scuola-lavoro che faremo per i prossimi 3 anni. spiegato dai rappresentanti di alcune aziende.Esperienza introduttiva molto utile e comprensibile.')">
+                    <img src="anpal.png" class="card-img-contain"><div class="card-tag">ANPAL</div>
+                </div>
+            </div>
+            <div id="terzo-viewer" class="project-viewer hidden-viewer">
+                <div class="scan-wrapper"><img id="terzo-img" src="" class="viewer-img-contain"><div class="scan-line"></div></div>
+                <div class="viewer-text"><h2 id="terzo-title">_</h2><p id="terzo-desc" class="large-desc"></p></div>
+            </div>
+        </section>
+
+       <section id="quarto" class="page">
+    <h1 class="led-title">QUARTO ANNO</h1>
+    <div class="project-grid">
+        <div class="card" onclick="apriProgetto('quarto', 'Incontro con Confindustria', 'confindustria.jpg', 'Come progetto assieme alla comunita di imprese Confindustria abbiamo avuto un incontro con dei rappresentanti al tecnopolo di Reggio EMilia, ci sono stati spiegati i percorsi che potremmo prendere usciti dalla scuola superiore, con anche le varie statistiche di scelta in media e stipendi.')">
+            <img src="confindustria.jpg" class="card-img-full"><div class="card-tag">CONFINDUSTRIA</div>
+        </div>
+        <div class="card" onclick="apriProgetto('quarto', 'Incontro con Polarity', 'polarity.png', 'Incontro con i ragazzi dell\'azienda Polarity presentandoci il mondo della programmazione di app, siti e di come sta entrando l\'intelligenza artificiale nel nostro mondo.')">
+            <img src="polarity.png" class="card-img-full"><div class="card-tag">POLARITY</div>
+        </div>
+        <div class="card" onclick="apriProgetto('quarto', 'Esposizione progetti', 'project.jpg', 'Incontro con i ragazzi di quinta che presentano i loro progetti finali.')">
+            <img src="project.jpg" class="card-img-full"><div class="card-tag">PROJECT WORK</div>
+        </div>
+    </div>
+    <div id="quarto-viewer" class="project-viewer hidden-viewer">
+        <div class="scan-wrapper"><img id="quarto-img" src="" class="viewer-img"><div class="scan-line"></div></div>
+        <div class="viewer-text"><h2 id="quarto-title">_</h2><p id="quarto-desc" class="large-desc"></p></div>
+    </div>
+</section>
+
+        <section id="quinto" class="page">
+            <h1 class="led-title">QUINTO ANNO</h1>
+            <div class="project-grid">
+                <div class="card" onclick="apriProgetto('quinto', 'WORK IN PROGRESS', 'work2.jpg', 'Sfortumente ho ancora affrontato la classe quinta.')">
+                    <img src="work2.jpg" class="card-img-full">
+                </div>
+                
+            </div>
+            <div id="quinto-viewer" class="project-viewer hidden-viewer">
+                <div class="scan-wrapper"><img id="quinto-img" src="" class="viewer-img"><div class="scan-line"></div></div>
+                <div class="viewer-text"><h2 id="quinto-title">_</h2><p id="quinto-desc" class="large-desc"></p></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
