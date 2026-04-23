@@ -21,7 +21,7 @@ function naviga(pageId, event) {
 
     if (pageId === 'chi-sono') {
         const bioImg = document.getElementById('bio-img-anim');
-        const bioText = "Benvenuto nel mio portfolio. Io sono Alessandro Colacino e frequento il quarto anno dell'istituto tecnico del Blaise Pascal, ho scelto questa scuola perché mi piacciono molto i videogiochi e sogno un giorno di poterli programmare.";
+        const bioText = "Benvenuto nel mio portfolio. Io sono Alessandro Colacino e frequento il quarto anno dell'istituto tecnico Superiore Blaise Pascal, ho scelto questa scuola perché mi piacciono molto i videogiochi e sogno un giorno di poterli programmare.";
         const bioElement = document.getElementById('bio-text-anim');
         
         bioImg.classList.remove('run-scan');
